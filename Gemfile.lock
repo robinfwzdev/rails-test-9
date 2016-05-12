@@ -53,6 +53,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -94,6 +98,11 @@ GEM
     multi_json (1.12.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    paperclip (4.2.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -195,6 +204,7 @@ DEPENDENCIES
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
+  paperclip (= 4.2.2)
   pg (~> 0.15)
   rails (= 4.2.6)
   rspec-rails
