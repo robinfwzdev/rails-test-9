@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512145356) do
+ActiveRecord::Schema.define(version: 20160512150520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,10 @@ ActiveRecord::Schema.define(version: 20160512145356) do
     t.datetime "picture_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shoe_id"
   end
+
+  add_index "photos", ["shoe_id"], name: "index_photos_on_shoe_id", using: :btree
 
   create_table "shoes", force: :cascade do |t|
     t.string   "sku"
