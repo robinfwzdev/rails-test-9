@@ -12,4 +12,8 @@ RSpec.describe Photo, type: :model do
         .less_than(5.megabytes)
     end
   end
+
+  context 'associations' do
+    it { is_expected.to belong_to :shoe }
+  end
 end

@@ -1,4 +1,6 @@
 class Photo < ActiveRecord::Base
+  belongs_to :shoe
+
   has_attached_file :picture,
     styles: { thumb: '370x200>' },
     default_url: "photo/missing.png"
