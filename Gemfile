@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', '4.2.2'
 gem 'react-rails', '~> 1.0'
+gem 'slim'
 
 group :development, :test do
   gem 'rspec-rails'         # Rails testing
