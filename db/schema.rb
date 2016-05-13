@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513142518) do
+ActiveRecord::Schema.define(version: 20160513142719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +35,14 @@ ActiveRecord::Schema.define(version: 20160513142518) do
   create_table "shoes", force: :cascade do |t|
     t.string   "sku"
     t.string   "name"
-    t.decimal  "price",      precision: 10, scale: 2
+    t.decimal  "price",                precision: 10, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "brand_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "shoes", ["brand_id"], name: "index_shoes_on_brand_id", using: :btree
