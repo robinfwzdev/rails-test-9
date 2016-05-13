@@ -1,6 +1,9 @@
 .layouts-footer-container {
   background: $black;
   padding-top: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 
   #footer-logo-wrap {
     text-align: center;
