@@ -1,0 +1,25 @@
+.layouts-footer-container {
+  background: $black;
+  padding-top: 40px;
+
+  #footer-logo-wrap {
+    text-align: center;
+  }
+
+  .menu-wrap {
+    text-align: center;
+
+    ul {
+      width: 100%;
+      margin: 0;
+      padding-left: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        padding: 20px;
+        color: #fff;
+      }
+    }
+  }
+}
