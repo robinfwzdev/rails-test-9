@@ -1,0 +1,7 @@
+.shoes-list-container
+  - if shoes.present?
+    - shoes.in_groups_of(3,false) do |items|
+      .row
+        - items.each do |shoe|
+          .col.s4
+            = render partial: "shoes/shoe", locals: { shoe: shoe }
