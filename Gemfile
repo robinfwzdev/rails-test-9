@@ -13,6 +13,7 @@ gem 'paperclip', '4.2.2'
 gem 'react-rails', '~> 1.0'
 gem 'slim'
 gem 'materialize-sass'
+gem 'simple_form'
 
 group :development, :test do
   gem 'rspec-rails'         # Rails testing
