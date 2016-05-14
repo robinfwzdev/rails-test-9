@@ -1,0 +1,23 @@
+.shoes-search-container {
+  .title {
+    color: $gray;
+    font-size: 16px;
+  }
+
+  p {
+    color: $black;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .brands-group {
+    span {
+      display: inline-block;
+      width: 100%;
+
+      label {
+        color: $black;
+      }
+    }
+  }
+}
