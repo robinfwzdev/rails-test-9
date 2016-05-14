@@ -14,6 +14,7 @@ gem 'react-rails', '~> 1.0'
 gem 'slim'
 gem 'materialize-sass'
 gem 'simple_form'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'rspec-rails'         # Rails testing
