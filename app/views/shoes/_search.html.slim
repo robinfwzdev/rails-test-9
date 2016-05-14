@@ -1,0 +1,12 @@
+.shoes-search-container
+  = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: shoes_path, remote: true, html: { method: :get } do |f|
+    .title Refine by
+    .filter-by-brand
+      p Brands
+      .brands-group
+        = f.collection_check_boxes :brand_ids, Brand.all.map{ |b| [b.id, b.name] }, :first, :last
+      p Price
+      .price
+        #price_slider
+        = f.input :min_price, as: :hidden
+        = f.input :max_price, as: :hidden 
