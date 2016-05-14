@@ -1,0 +1,27 @@
+#shoes-index-container {
+  .container-left {
+    padding-top: 40px;
+  }
+
+  .shoes-top {
+    padding-top: 40px;
+
+    span {
+      font-size: 16px;
+      color: $black;
+      display: inline-block;
+    }
+
+    .asc_desc {
+      padding-left: 10px;
+    }
+
+    .number {
+      padding-right: 5px;
+    }
+
+    select {
+      display: block;
+    }
+  }
+}

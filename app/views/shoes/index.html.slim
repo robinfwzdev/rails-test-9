@@ -1,0 +1,20 @@
+#shoes-index-container
+  .container
+    .row
+      .col.s3.container-left
+        = render 'search'
+      .col.s9.container-right
+        .banner
+          = image_tag 'layouts/banner'
+        .shoes-top
+          .row
+            .col.s6
+              .num-of-shoes
+                span.number = @shoes.size 
+                span  matching shoes
+            .col.s6
+              .sort.right
+                span.title Sort by:
+                span.asc_desc = select_tag :shoe_sort, options_for_select([["DESC", "desc"], ["ASC", "asc"]]), include_blank: 'Alphabetical'
+        #shoes-wrap
+          = render partial: "list", locals: { shoes: @shoes }
