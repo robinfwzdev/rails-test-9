@@ -5,3 +5,4 @@
         - items.each do |shoe|
           .col.s4
             = render partial: "shoes/shoe", locals: { shoe: shoe }
+    = js_will_paginate shoes, previous_label: "<i class='fa fa-chevron-left'></i>", next_label: "<i class='fa fa-chevron-right'></i>"        
