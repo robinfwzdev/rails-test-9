@@ -20,4 +20,19 @@
       }
     }
   }
+
+  .noUi-marker-horizontal, .noUi-value-horizontal {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+    position: absolute;
+  }
+
+  .price {
+    margin-top: 40px;
+  }
+
+  .noUi-pips {
+    margin-top: -45px;
+  }
 }
