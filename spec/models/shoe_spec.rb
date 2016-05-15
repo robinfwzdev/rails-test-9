@@ -20,20 +20,33 @@ RSpec.describe Shoe, type: :model do
     end
   end
 
-  describe '#find_by_brands' do
+  describe 'find_shoes_by_condition' do
     let!(:adias) { create(:brand) }
     let!(:nike)  { create(:brand) }
 
-    let!(:nike_small)  { create(:shoe, brand_id: nike.id) }
-    let!(:nike_medium) { create(:shoe, brand_id: nike.id) }
-    let!(:adias_small)  { create(:shoe, brand_id: adias.id) }
-    let!(:adias_medium) { create(:shoe, brand_id: adias.id) }
+    describe '#find_by_brands' do
+      let!(:nike_small)  { create(:shoe, brand_id: nike.id) }
+      let!(:nike_medium) { create(:shoe, brand_id: nike.id) }
+      let!(:adias_small)  { create(:shoe, brand_id: adias.id) }
+      let!(:adias_medium) { create(:shoe, brand_id: adias.id) }
 
-    it 'find shoes by brands' do
-      results = Shoe.find_by_brands(nike.id)
-      expect(results).to include nike_small
-      expect(results).to include nike_medium
-      expect(results).not_to include adias_medium
+      it 'find shoes by brands' do
+        results = Shoe.find_by_brands(nike.id)
+        expect(results).to include nike_small
+        expect(results).to include nike_medium
+        expect(results).not_to include adias_medium
+      end
+    end
+
+    describe '#find_by_min_price' do
+      let!(:nike_flex)  { create(:shoe, price: 20) }
+      let!(:nike_free)  { create(:shoe, price: 50) }
+
+      it 'find shoes by brands' do
+        results = Shoe.find_by_min_price(50)
+        expect(results).to include nike_free
+        expect(results).not_to include nike_flex
+      end
     end
   end
 end
