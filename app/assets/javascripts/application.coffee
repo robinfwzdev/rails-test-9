@@ -5,4 +5,6 @@
 #= require components
 #= require materialize-sprockets
 #= require materialize/extras/nouislider
-#= require search
+#= require shoes/search
+#= require shoes/index
+#= require jquery.cookie
