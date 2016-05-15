@@ -23,6 +23,8 @@ RSpec.describe Shoe, type: :model do
   describe 'find_shoes_by_condition' do
     let!(:adias) { create(:brand) }
     let!(:nike)  { create(:brand) }
+    let!(:nike_flex)  { create(:shoe, price: 20) }
+    let!(:nike_free)  { create(:shoe, price: 50) }
 
     describe '#find_by_brands' do
       let!(:nike_small)  { create(:shoe, brand_id: nike.id) }
@@ -46,6 +48,14 @@ RSpec.describe Shoe, type: :model do
         results = Shoe.find_by_min_price(50)
         expect(results).to include nike_free
         expect(results).not_to include nike_flex
+      end
+    end
+
+    describe '#find_by_max_price' do
+      it 'find shoes by brands' do
+        results = Shoe.find_by_max_price(20)
+        expect(results).to include nike_flex
+        expect(results).not_to include nike_free
       end
     end
   end
