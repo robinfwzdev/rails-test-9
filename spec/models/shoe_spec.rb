@@ -19,4 +19,21 @@ RSpec.describe Shoe, type: :model do
         .less_than(5.megabytes)
     end
   end
+
+  describe '#find_by_brands' do
+    let!(:adias) { create(:brand) }
+    let!(:nike)  { create(:brand) }
+
+    let!(:nike_small)  { create(:shoe, brand_id: nike.id) }
+    let!(:nike_medium) { create(:shoe, brand_id: nike.id) }
+    let!(:adias_small)  { create(:shoe, brand_id: adias.id) }
+    let!(:adias_medium) { create(:shoe, brand_id: adias.id) }
+
+    it 'find shoes by brands' do
+      results = Shoe.find_by_brands(nike.id)
+      expect(results).to include nike_small
+      expect(results).to include nike_medium
+      expect(results).not_to include adias_medium
+    end
+  end
 end
