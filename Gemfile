@@ -16,6 +16,7 @@ gem 'materialize-sass'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'font-awesome-rails'
+gem 'jquery-cookie-rails'
 
 group :development, :test do
   gem 'rspec-rails'         # Rails testing
