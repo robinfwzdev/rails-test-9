@@ -23,4 +23,24 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
   }
+
+  .add_to_cart {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%; 
+    border-radius: 2px;
+
+    button {
+      width: 100%;
+      background-color: #1976d2;
+      border: none;
+
+      span {
+        width: 100%;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
