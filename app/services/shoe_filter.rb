@@ -5,11 +5,11 @@ class ShoeFilter
   attr_accessor :brand_ids, :min_price, :max_price, :sort
 
   def initialize(option, sort = '')
-    @sort       = sort
     return if option.nil?
     @brand_ids  = option[:brand_ids]
     @min_price  = option[:min_price]
     @max_price  = option[:max_price]
+    @sort       = sort
   end
 
   def result
