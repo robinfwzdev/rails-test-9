@@ -1,0 +1,18 @@
+.shoes-shoe-container {
+  .name {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+
+  .sku {
+    font-size: 14px;
+    color: $gray;
+  }
+
+  .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+  }
+}
